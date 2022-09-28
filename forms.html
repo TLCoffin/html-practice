@@ -8,12 +8,54 @@
 </head>
 <body>
     <h2>Plant Suggestions</h2>
+    <!--
+        The formtag is used to create a container where all the inputs for a form
+         must be put inside.
+         The attributes that are name, id, and method.
+
+         name give some descriptive information about what the form will be used for.
+
+         id allows us to reference this form later in fieldsets and other areas of our
+         code
+
+         method has two typical values: get and post. Get is used for forms that do 
+         not ask for personal information (search bars, etc.). post is for forms 
+         that ask for personal information (login and signup pages, etc.).
+    -->
     <form name="plant-suggestions" id="plant" method="get">
+        <!--
+            This is a text input. type="text", name, and id are all required attributes.
+            the required attribute is only nessesary when you want to make sure the user 
+            has to fill in the input before submitting the form.
+
+            The type attribute defines the type of input.
+            The name attribute defines the variable name that would be used for the 
+            input when the data gets passed to the server (requires back-end scripting,
+            which is beyond the scope of this course).
+            The id attribute allows us to reference the input from the label and from
+            other parts of our code.
+
+            All inputs need a label with the for attribute that links the label to the 
+            input using the input's id attribute.
+            When an input is required, it is important to include the word required
+            in the labe's text.
+        -->
         <label for="plant">Please Enter Your Favorite Plant [required]:</label>
         <input type="text" name="plant-type" id="plant" required />
         <br />
-        <label for="password">Please Enter Your Password:</label>
-        <input type="password" name="userPassword" id="password" />
+        <!--
+            This is a password input. type="password", name and id are all required
+            attributes.
+            As always, each input needs a label with the for attribute to link the label
+            to an input.
+
+            I have commented this input out because I will not be needing a password
+            input for this form.
+        -->
+        <!--
+            <label for="password">Please Enter Your Password:</label>
+            <input type="password" name="userPassword" id="password" />
+        -->
     </form>
 
     <a href="index.html">Homepage</a>
