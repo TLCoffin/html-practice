@@ -185,12 +185,27 @@
             minlength and maxlength can be good attributes to use for some basic error-checking
         -->
 
-        <label for="telephone">PLease enter your telephone number [example: 1-555-867-5309]:</label>
+        <label for="telephone">Please enter your telephone number [example: 1-555-867-5309]:</label>
         <input type="tel" name="userTel" id="telephone" minLength="14" maxLength="22" />
         <br />
         <br />
 
-        <input type="submit" name="submitButton" id="submit" value="Click this to submit your plant suggestions" />
+        <!--
+            This is an example of a reset button input. type="reset", name and id are all required.
+            value is an optional attribute for if you want to change the default text on the button.
+        -->
+        <input type="reset" name="clearForm" id="clear" value="Clear" />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <!--
+            This is an example of a submit button input. Note: This input has to be inside the form tag.
+            type="submit", name and id are all required. value is optional for the same reason as reset.
+        -->
+
+        <input type="submit" name="submitButton" id="submit" value="Submit" />
     </form>
 
     <a href="index.html">Homepage</a>
