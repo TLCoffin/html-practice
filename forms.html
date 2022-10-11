@@ -1,78 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms</title>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Plant Suggestions</h2>
     <!--
-        The formtag is used to create a container where all the inputs for a form
-         must be put inside.
-         The attributes that are name, id, and method.
+      The form tag is used to create a container where all the inputs for a form
+      must be put inside.
+      The attributes that are name, id, and method.
 
-         name give some descriptive information about what the form will be used for.
+      name give some descriptive information about what the form will be used for.
 
-         id allows us to reference this form later in fieldsets and other areas of our
-         code
+      id allows us to reference this form later in fieldsets and other areas of our
+      code
 
-         method has two typical values: get and post. Get is used for forms that do 
-         not ask for personal information (search bars, etc.). post is for forms 
-         that ask for personal information (login and signup pages, etc.).
+      method has two typical values: get and post. Get is used for forms that do 
+      not ask for personal information (search bars, etc.). post is for forms 
+      that ask for personal information (login and signup pages, etc.).
     -->
     <form name="plant-suggestions" id="plant" method="get">
+      <!--
+        This is a text input. type="text", name, and id are all required attributes.
+        the required attribute is only nessesary when you want to make sure the user 
+        has to fill in the input before submitting the form.
+
+        The type attribute defines the type of input.
+        The name attribute defines the variable name that would be used for the 
+        input when the data gets passed to the server (requires back-end scripting,
+        which is beyond the scope of this course).
+        The id attribute allows us to reference the input from the label and from
+        other parts of our code.
+
+        All inputs need a label with the for attribute that links the label to the 
+        input using the input's id attribute.
+        When an input is required, it is important to include the word required
+        in the labe's text.
+      -->
+      <label for="plant">Please Enter Your Favorite Plant [required]:</label>
+      <input type="text" name="plant-type" id="plant" required />
+      <br />
+      <!--
+        This is a password input. type="password", name and id are all required
+        attributes.
+        As always, each input needs a label with the for attribute to link the label
+        to an input.
+
+        I have commented this input out because I will not be needing a password
+        input for this form.
+      -->
+      <!--
+        <label for="password">Please Enter Your Password:</label>
+        <input type="password" name="userPassword" id="password" />
+      -->
+
+      <!--
+        A fieldset is an area in your form where you put inputs that are more related to each other
+        than they are related to other inputs in the form.
+
+        form is an important attribute to link the fieldset to the form it is related to.
+      -->
+      <fieldset form="plants">
         <!--
-            This is a text input. type="text", name, and id are all required attributes.
-            the required attribute is only nessesary when you want to make sure the user 
-            has to fill in the input before submitting the form.
-
-            The type attribute defines the type of input.
-            The name attribute defines the variable name that would be used for the 
-            input when the data gets passed to the server (requires back-end scripting,
-            which is beyond the scope of this course).
-            The id attribute allows us to reference the input from the label and from
-            other parts of our code.
-
-            All inputs need a label with the for attribute that links the label to the 
-            input using the input's id attribute.
-            When an input is required, it is important to include the word required
-            in the labe's text.
+          Legend is text the appears above the fieldset and breaks the line of the fieldset box.
+          It describes how the items in the fieldset are related.
         -->
-        <label for="plant">Please Enter Your Favorite Plant [required]:</label>
-        <input type="text" name="plant-type" id="plant" required />
-        <br />
-        <!--
-            This is a password input. type="password", name and id are all required
-            attributes.
-            As always, each input needs a label with the for attribute to link the label
-            to an input.
-
-            I have commented this input out because I will not be needing a password
-            input for this form.
-        -->
-        <!--
-            <label for="password">Please Enter Your Password:</label>
-            <input type="password" name="userPassword" id="password" />
-        -->
-
-
-
-
-
-        <!--
-            A fieldset is an area in your form where you put inputs that are more related to each other
-            than they are related to other inputs in the form.
-
-            form is an important attribute to link the fieldset to the form it is related to.
-        -->
-        <fieldset form="plants">
-        <!--
-             Legend is text the appears above the fieldset and breaks the line of the fieldset box.
-             It describes how the items in the fieldset are related.
-         -->
-            <legend>What plants are best</legend>
+        <legend>What plants are best</legend>
 
         <!--
             This is a checkbox input. NOTE, this is an input where the input typically comes
@@ -82,130 +78,144 @@
             and provides it's value to the server if the user checks the box and submits the form.
             In this case, what would be passed to the server is waterBottle=bottle.
         -->
-            <input type="checkbox" name="mossPlant" id="moss" value="moss">
-            <label for="moss">Moss</label>
-            <br />
-
-            <input type="checkbox" name="flowerPlant" id="flower" value="flower">
-            <label for="flower">Flower</label>
-            <br />
-
-            <input type="checkbox" name="vinePlant" id="vine" value="vine">
-            <label for="vine">Vine</label>
-            <br />
-
-            <input type="checkbox" name="treePlant" id="tree" value="tree">
-            <label for="tree">Tree</label>
-            <br />
-
-            <label>Do you have any other suggestions?</label>
-            <input type="text" name="itemSuggestions" id="item-suggestion" />
-        </fieldset>
+        <input type="checkbox" name="mossPlant" id="moss" value="moss" />
+        <label for="moss">Moss</label>
         <br />
 
-        <fieldset form="plants">
-            <legend>Which garden is this plant in?</legend>
+        <input type="checkbox" name="flowerPlant" id="flower" value="flower" />
+        <label for="flower">Flower</label>
+        <br />
 
-            <!--
-                This is a radio button input which are good when you want the use
-                to select one option from a list of options.
+        <input type="checkbox" name="vinePlant" id="vine" value="vine" />
+        <label for="vine">Vine</label>
+        <br />
 
-                name, id, and value are all required attributes. The value should represent
-                to the choice the user has selected. Note, ,pst importantly, the name attribute
-                for each radio button should be exactly the same.
+        <input type="checkbox" name="treePlant" id="tree" value="tree" />
+        <label for="tree">Tree</label>
+        <br />
 
-                This is also an input where the label typically shows up after the input.
-            -->
+        <label>Do you have any other suggestions?</label>
+        <input type="text" name="itemSuggestions" id="item-suggestion" />
+      </fieldset>
+      <br />
 
-            <input type="radio" name="garden" id="rock" value="rock" />
-            <label for="rock">Rocks</label>
-            <br />
-
-            <input type="radio" name="garden" id="dirt" value="dirt" />
-            <label for="dirt">Dirt</label>
-            <br />
-
-            <input type="radio" name="garden" id="gardenBox" value="gardenBox" />
-            <label for="gardenBox">Garden Box</label>
-        </fieldset>
-
+      <fieldset form="plants">
+        <legend>Which garden is this plant in?</legend>
 
         <!--
-            This is a select input, which is essentially a dropdown input.
+          This is a radio button input which are good when you want the use
+          to select one option from a list of options.
 
-            name and id are the required attributes for a select input.
+          name, id, and value are all required attributes. The value should represent
+          to the choice the user has selected. Note, ,pst importantly, the name attribute
+          for each radio button should be exactly the same.
 
-            Select inputs are widely used, but can lead to accessibility issues.
-            If you can accomplish the same thing you want to do with a different
-            type of input (i.e., radio buttons, text-based, etc.), you should use
-            the other method of getting this information.
+          This is also an input where the label typically shows up after the input.
         -->
 
-        <label for="garden">Which type of garden do you have or want to make? [required]</label>
-        <select name="gardenSelect" id="garden" required>
-            <!-- 
-                optgroups let you group the options inside your select input. 
-                label is required so that the optgroup displays what the category is,
-                for the options inside the group.
-             -->
-            <optgroup label="Natural">
-                <!--
-                    the option tag is the actual option a user can select.
-                    It requires the value attribute for when the selection gets sent to the server
-                -->
-                <option value="rocks"Rocks></option>
-                <option value="dirt">Dirt</option>
-                <option value="soil">Soil</option>
-            </optgroup>
-
-            <optgroup label="Urban">
-                <option value="fencedIn">Fenced In</option>
-                <option value="gardenBox">Garden Box</option>
-            </optgroup>
-        </select>
-        <br />
+        <input type="radio" name="garden" id="rock" value="rock" />
+        <label for="rock">Rocks</label>
         <br />
 
-        <!--
-            This is a textarea input. This allows a user to enter multiple lines of information
-            for a form. 
+        <input type="radio" name="garden" id="dirt" value="dirt" />
+        <label for="dirt">Dirt</label>
+        <br />
 
-            name and id are required attributes.
-            highly reccomended attributes are rows and cols. 
-            rows defines the number of lines a user can type before a scrollbar appears.
-            cols defines the number of characters across a use can type before their input
-            goes to the next line.
+        <input type="radio" name="garden" id="gardenBox" value="gardenBox" />
+        <label for="gardenBox">Garden Box</label>
+      </fieldset>
+
+      <!--
+        This is a select input, which is essentially a dropdown input.
+
+        name and id are the required attributes for a select input.
+
+        Select inputs are widely used, but can lead to accessibility issues.
+        If you can accomplish the same thing you want to do with a different
+        type of input (i.e., radio buttons, text-based, etc.), you should use
+        the other method of getting this information.
+      -->
+
+      <label for="garden">
+        Which type of garden do you have or want to make? [required]
+      </label>
+      <select name="gardenSelect" id="garden" required>
+        <!-- 
+          optgroups let you group the options inside your select input. 
+          label is required so that the optgroup displays what the category is,
+          for the options inside the group.
         -->
-        <label for="comments">Additional Comments</label>
-        <textarea name="additionalComments" id="comments" rows="10" cols="50"></textarea>
-        <br />
+        <optgroup label="Natural">
+          <!--
+            the option tag is the actual option a user can select.
+            It requires the value attribute for when the selection gets sent to the server
+          -->
+          <option value="rocks" Rocks></option>
+          <option value="dirt">Dirt</option>
+          <option value="soil">Soil</option>
+        </optgroup>
 
-        <!--
-            This is a telephone input. type="tel", name and id are all required.
-            minlength and maxlength can be good attributes to use for some basic error-checking
-        -->
+        <optgroup label="Urban">
+          <option value="fencedIn">Fenced In</option>
+          <option value="gardenBox">Garden Box</option>
+        </optgroup>
+      </select>
+      <br />
+      <br />
 
-        <label for="telephone">Please enter your telephone number [example: 1-555-867-5309]:</label>
-        <input type="tel" name="userTel" id="telephone" minLength="14" maxLength="22" />
-        <br />
-        <br />
+      <!--
+        This is a textarea input. This allows a user to enter multiple lines of information
+        for a form. 
 
-        <!--
-            This is an example of a reset button input. type="reset", name and id are all required.
-            value is an optional attribute for if you want to change the default text on the button.
-        -->
-        <input type="reset" name="clearForm" id="clear" value="Clear" />
-        <br />
-        <br />
-        <br />
-        <br />
+        name and id are required attributes.
+        highly reccomended attributes are rows and cols. 
+        rows defines the number of lines a user can type before a scrollbar appears.
+        cols defines the number of characters across a use can type before their input
+        goes to the next line.
+      -->
+      <label for="comments">Additional Comments</label>
+      <textarea
+        name="additionalComments"
+        id="comments"
+        rows="10"
+        cols="50"
+      ></textarea>
+      <br />
 
-        <!--
-            This is an example of a submit button input. Note: This input has to be inside the form tag.
-            type="submit", name and id are all required. value is optional for the same reason as reset.
-        -->
+      <!--
+        This is a telephone input. type="tel", name and id are all required.
+        minlength and maxlength can be good attributes to use for some basic error-checking
+      -->
 
-        <input type="submit" name="submitButton" id="submit" value="Submit" />
+      <label for="telephone">
+        Please enter your telephone number [example: 1-555-867-5309]:
+      </label>
+      <input
+        type="tel"
+        name="userTel"
+        id="telephone"
+        minlength="14"
+        maxlength="22"
+      />
+      <br />
+      <br />
+
+      <!--
+        This is an example of a reset button input. type="reset", name and id are all required.
+        value is an optional attribute for if you want to change the default text on the button.
+      -->
+      <input type="reset" name="clearForm" id="clear" value="Clear" />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <!--
+        This is an example of a submit button input. Note: This input has to be inside the form tag.
+        type="submit", name and id are all required. value is optional for the same reason as reset.
+      -->
+
+      <input type="submit" name="submitButton" id="submit" value="Submit" />
     </form>
 
     <a href="index.html">Homepage</a>
@@ -215,5 +225,5 @@
     <a href="iframes-tables-and-lists.html">Iframes Tables and Lists</a>
     <br />
     <a href="headings-and-paragraphs.html">Headings and Paragraphs</a>
-</body>
+  </body>
 </html>
