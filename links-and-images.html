@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Links and Images</title>
-</head>
-<body>
-    <h3>Links and Images</h3>
-    <!--
+  </head>
+  <body>
+    <header>
+      <h1>Links and Images</h1>
+      <nav>
+        <table>
+          <tr>
+            <a href="index.html">Homepage</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+          </tr>
+          <tr>
+            <a href="links-and-images.html">Links and Images</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+          </tr>
+          <tr>
+            <a href="headings-and-paragraphs.html">Headings and Paragraphs</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+          </tr>
+          <tr>
+            <a href="forms.html">Forms</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+          </tr>
+          <tr>
+            <a href="iframes-tables-and-lists.html"
+              >IFrames, Tables, and List's</a
+            >&nbsp;&nbsp;&nbsp;&nbsp;
+          </tr>
+        </table>
+      </nav>
+    </header>
+
+    <main>
+      <!--
         Paragraphs are an example of block elements because, by default,
         they take up the enitre width of the web page and add space at the
         top and bottom of the element.
@@ -17,38 +46,35 @@
         which we accessed using Ctrl+Shif+I. Developper tools is helpful to show you the,
         exact code that is used to display a specific element and can show you the width,
         height, and spacing around an element.
-    -->
-    <p>This web page shows the difference between block and inline elements!</p>
-    <!--
+      -->
+      <p>
+        This web page shows the difference between block and inline elements!
+      </p>
+      <!--
         Anchors are an example of inline elements because, by default, 
         they only take up the space that they need to.
-    -->
-    <a href="index.html">Homepage</a>
-    <br />
-    <a href="headings-and-paragraphs.html">Headings and Paragraphs</a>
-    <br />
-    <a href="https://en.wikipedia.org/wiki/Moss" target="_blank">Moss Website</a>
-    <br />
-    <a href="iframes-tables-and-lists.html">IFrames, Tables and Lists</a>
-    <br />
-    <a href="forms.html">Forms</a>
+      -->
 
-    <!-- 
-    This is an example of an image tag.
-    The src attribute is the location of the image we want to display.
-    The src attribute can be an internet location (i.e., https://www.google.com/...),
-    But the best practice is to have your own images folder that stores all the
-    images on your website.
+      <a href="https://en.wikipedia.org/wiki/Moss" target="_blank"
+        >Moss Website</a
+      >
 
-    NOTE: img is a self closing tag.
-    -->
-    <br />
-    <img 
-        src="Images/moss-hills.jpg" 
-        width="400" 
-        height="266" 
+      <!-- 
+        This is an example of an image tag.
+        The src attribute is the location of the image we want to display.
+        The src attribute can be an internet location (i.e., https://www.google.com/...),
+        But the best practice is to have your own images folder that stores all the
+        images on your website.
+
+        NOTE: img is a self closing tag.
+      -->
+      <br />
+      <img
+        src="Images/moss-hills.jpg"
+        width="400"
+        height="266"
         alt="A side view of moss with little lumps and little rolling hills the moss is vibrant green. There are sticks, rotting wood, and rocks in the background.
-            Photo credit: Gardening Know How"
-    />
-</body>
+        Photo credit: Gardening Know How" />
+    </main>
+  </body>
 </html>
